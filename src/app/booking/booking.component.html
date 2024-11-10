@@ -1,0 +1,130 @@
+
+<nav>
+  <div class="navbar">
+    <h1>Travel ODISHA</h1>
+    <ul class="nav-links">
+        <li><a (click)="home()">Home</a></li>
+        <li><a (click)="packagei()">Packages</a></li>
+        <li><a (click)="mybookingss()"> My bookings</a></li>
+        <li><a  (click)="profile()">Profile</a></li>
+    </ul>
+    <div class="search-box">
+        <input type="text" placeholder="🔍Search...">
+        <button id="logoutBtn" (click)="onLogout()">Logout</button>
+    </div>
+  </div>
+  </nav>
+
+<div class="container">
+    <!-- Destination Section with Background Image -->
+     <div class="name">
+        <div class="name"> <h1>{{packageDetails?.name}}</h1></div>
+     </div>
+    <div class="price-section">
+        <div class="price">₹{{ packageDetails?.price }}</div>
+        <p>per person</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content-wrapper">
+        <!-- Left Side Content -->
+        <div class="left-content">
+            <!-- Description -->
+            <div class="description">
+                <h2>Tour Description</h2>
+                <p>{{ packageDetails?.description }}</p>
+            </div>
+
+            <!-- Info Sections -->
+            <div class="info-sections">
+                <!-- Tour Plan -->
+                <div class="tour-plan">
+                    <h2>Tour Plan</h2>
+                    <p>{{ packageDetails?.highlights }}</p>
+                    <ul>
+                        <li *ngFor="let day of packageDetails?.plan">{{ day }}</li>
+                    </ul>
+                </div>
+
+                <!-- Reviews -->
+                <div class="reviews">
+                    <h2>Reviews</h2>
+                    <ul>
+                        <li *ngFor="let review of packageDetails?.reviews">
+                            <span>{{ review.rating }}</span> - {{ review.comment }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Booking Form -->
+        <div class="containerr">
+            <h2>Book Your Tour</h2>
+            <form (ngSubmit)="bookTour()">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" [(ngModel)]="bookingDetails.name" name="name" required />
+              </div>
+          
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" [(ngModel)]="bookingDetails.email" name="email" required />
+              </div>
+          
+              <div class="form-group">
+                <label for="date">Tour Date</label>
+                <input type="date" id="date" [(ngModel)]="bookingDetails.date" name="date" required />
+              </div>
+          
+              <div class="form-group">
+                <label for="guests">Number of Guests</label>
+                <select id="guests" [(ngModel)]="bookingDetails.guests" name="guests" required>
+                  <option value="1">1 Person</option>
+                  <option value="2">2 People</option>
+                  <option value="3">3 People</option>
+                  <option value="4">4 People</option>
+                </select>
+              </div>
+          
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" [(ngModel)]="bookingDetails.phone" name="phone" required />
+              </div>
+          
+              <button  class="book-button" (click)="bookTour()">Book Now</button>
+            </form>
+          </div>
+          
+          
+    </div>
+</div>
+
+
+
+      
+<footer id="footer">
+  <div class="footer-container">
+      <div class="footer-section">
+          <h3>About Us</h3>
+          <p>We are dedicated to providing the best travel experiences for our customers.</p>
+      </div>
+      <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#gallery">Traveler Stories</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+              <li><a href="#faq">FAQs</a></li>
+          </ul>
+      </div>
+      <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Email: inf</p>
+          <p>Phone: +1 234 567 890</p>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>&copy; 2024 Travel Planning Website. All rights reserved.</p>
+  </div>
+</footer>

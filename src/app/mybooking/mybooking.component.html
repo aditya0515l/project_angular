@@ -1,0 +1,72 @@
+<nav>
+    <div class="navbar">
+      <h1>Travel ODISHA</h1>
+      <ul class="nav-links">
+          <li><a (click)="home()">Home</a></li>
+          <li><a (click)="packagei()">Packages</a></li>
+          <li><a (click)="mybookingss()"> My bookings</a></li>
+          <li><a  (click)="profile()">Profile</a></li>
+      </ul>
+      <div class="search-box">
+          <input type="text" placeholder="🔍Search...">
+          <button id="logoutBtn" (click)="onLogout()">Logout</button>
+      </div>
+    </div>
+    </nav>
+<div class="container">
+    <h2>Booking Overview</h2>
+  
+    <!-- Previous Bookings Section -->
+    <section class="previous-bookings">
+      <h3>Previous Bookings</h3>
+      <div class="booking-cards">
+        <div class="booking-card" *ngFor="let booking of previousBookings">
+          <h4>{{ booking.destination }}</h4>
+          <p><strong>Dates:</strong> {{ booking.dates }}</p>
+          <p><strong>Guests:</strong> {{ booking.guests }} people</p>
+          <p><strong>Booking Ref:</strong> {{ booking.reference }}</p>
+          <button class="cta-button">View Details</button>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Current Bookings Section -->
+    <section class="current-bookings">
+      <h3>Current Bookings</h3>
+      <div class="booking-cards">
+        <div class="booking-card" *ngFor="let booking of currentBookings">
+          <h4>{{ booking.destination }}</h4>
+          <p><strong>Dates:</strong> {{ booking.dates }}</p>
+          <p><strong>Guests:</strong> {{ booking.guests }} people</p>
+          <p><strong>Booking Ref:</strong> {{ booking.reference }}</p>
+          <button class="cta-button">Manage Booking</button>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <footer id="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <p>We are dedicated to providing the best travel experiences for our customers.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Traveler Stories</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#faq">FAQs</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Email: inf</p>
+            <p>Phone: +1 234 567 890</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Travel Planning Website. All rights reserved.</p>
+    </div>
+  </footer>

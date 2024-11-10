@@ -1,0 +1,142 @@
+/* Global Styling */
+body {
+    background-image: url(https://static.vecteezy.com/system/resources/previews/025/871/534/original/travel-destination-background-and-template-design-with-travel-destinations-and-famous-landmarks-and-attractions-for-tourism-let-s-go-travel-illustration-vector.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container for the confirmation page */
+  .container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    margin: 3rem auto;
+    border-radius: 8px;
+    max-width: 900px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading Styling */
+  .container h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Package Details Section */
+  .package-details {
+    margin-bottom: 2rem;
+  }
+  
+  .package-details h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .package-details p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0.5rem 0;
+  }
+  
+  .package-details ul {
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+  
+  .package-details ul li {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+  }
+  
+  .package-details h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Booking Details Section */
+  .booking-details {
+    margin-bottom: 2rem;
+  }
+  
+  .booking-details h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .booking-details p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0.5rem 0;
+  }
+  
+  .booking-details strong {
+    font-weight: 700;
+    color: #333;
+  }
+  
+  /* Footer Styling */
+  #footer {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Button Styling (if needed for future use) */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-top: 2rem;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+  }
+  
+  /* Responsive Design for Smaller Screens */
+  @media (max-width: 768px) {
+    .container {
+      padding: 1.5rem;
+    }
+  
+    .container h2 {
+      font-size: 1.75rem;
+    }
+  
+    .package-details h3, .booking-details h3 {
+      font-size: 1.5rem;
+    }
+  
+    .package-details p, .booking-details p {
+      font-size: 0.9rem;
+    }
+  
+    button {
+      padding: 0.6rem 1.5rem;
+    }
+  }
+  

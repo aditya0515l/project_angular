@@ -1,0 +1,51 @@
+<body>
+
+  @if(isLoginView){
+
+  
+    <div class="container">
+      <h2>register</h2>
+      <form id="loginForm">
+        <div class="form-group">
+        <label for="username">Username:</label>
+        <input   [(ngModel)]="userregisterObj.username" name= "username" placeholder="username" required/>
+        </div>
+        <div class="form-group">
+          <label for="Email">Email</label>
+          <input  [(ngModel)]="userregisterObj.email" name= "email" placeholder="Email" required/>
+          </div>
+        <div class="form-group">
+        <label for="password">Password:</label>
+        <input  [(ngModel)]="userregisterObj.password" type="password" placeholder="Password" name="password" required/>
+        </div>
+        <button type="submit" (click)="onRegister()">register</button>
+        <p>already have account><a (click)="isLoginView=false">login here</a></p>
+      </form>
+      </div>
+    }
+ 
+  
+
+
+  @else {
+
+    <div class="container">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <div class="form-group">
+        <label for="username">Username:</label>
+        <input   [(ngModel)]="userlogin.email" name= "email" placeholder="Email" required/>
+        </div>
+        <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" [(ngModel)]="userlogin.password" placeholder="Password" name="password" required/>
+        </div>
+        <button type="submit" (click)="onlogin()" >Login</button>
+        <p> <a>forget password </a> </p>
+        <div class="divider"><p>Don't have an account? <a (click)="isLoginView = true">Register here</a></p></div>
+      </form>
+      </div> 
+
+      }
+      
+  </body>

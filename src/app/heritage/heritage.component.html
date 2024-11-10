@@ -1,0 +1,80 @@
+<nav>
+    <div class="navbar">
+      <h1>Travel ODISHA</h1>
+      <ul class="nav-links">
+        <li><a (click)="home()">Home</a></li>
+        <li><a (click)="packagei()">Packages</a></li>
+        <li><a (click)="mybookingss()"> My bookings</a></li>
+        <li><a  (click)="profile()">Profile</a></li>
+      </ul>
+      <div class="search-box">
+          <input type="text" placeholder="🔍Search...">
+          <button (click)="onLogout()">Logout</button>
+      </div>
+    </div>
+    </nav>
+
+<div class="container">
+    <header class="header">
+        <h1>Heritage Sites of Odisha</h1>
+     
+    </header>
+  
+    <div class="filters">
+        <button class="filter-btn"><a (click)="home()">All</a></button>
+        <button class="filter-btn" ><a (click)="temples()">Temples</a></button>
+        <button class="filter-btn"><a (click)="beaches()">Beaches</a></button>
+        <button class="filter-btn"><a (click)="wildlife()">Wildlife</a></button>
+        <button class="filter-btn active"><a (click)="heritage()">Heritage</a></button>
+        <button class="filter-btn"><a (click)="nature()">Nature</a></button>
+      </div>
+  
+   
+    <div class="heritage-grid">
+        <div *ngFor="let package of heritageSites" class="heritage-card">
+            <img [src]="package.imagePath" alt="{{ package.name }}">
+            <div class="heritage-info">
+                <div>
+                    <div class="heritage-name">{{ package.name }}</div>
+                    <div class="heritage-location">{{ package.location }}</div>
+                    <div class="heritage-about">{{ package.description }}</div>
+                </div>
+                <div class="buttons-container">
+                    <p class="rating">
+                        ★★★★★ <span>{{ package.rating }}</span>
+                        ₹{{ package.price }}
+                    </p>
+                    <button class="button know-more-btn">Know More</button>
+                    <button class="button book-now-btn" (click)="bookPackage(package)">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer id="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <p>We are dedicated to providing the best travel experiences for our customers.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Traveler Stories</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#faq">FAQs</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Email: inf</p>
+            <p>Phone: +1 234 567 890</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Travel Planning Website. All rights reserved.</p>
+    </div>
+  </footer>

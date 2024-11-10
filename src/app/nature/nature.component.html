@@ -1,0 +1,81 @@
+<nav>
+    <div class="navbar">
+      <h1>Travel ODISHA</h1>
+      <ul class="nav-links">
+        <li><a (click)="home()">Home</a></li>
+        <li><a (click)="packagei()">Packages</a></li>
+        <li><a (click)="mybookingss()"> My bookings</a></li>
+        <li><a  (click)="profile()">Profile</a></li>
+      </ul>
+      <div class="search-box">
+          <input type="text" placeholder="🔍Search...">
+          <button (click)="onLogout()">Logout</button>
+      </div>
+    </div>
+    </nav>
+<div class="container">
+    <header class="header">
+        <h1>Nature Destinations in Odisha</h1>
+        <p class="subtitle">Explore the breathtaking natural beauty of Odisha's wilderness</p>
+    </header>
+
+    <div class="filters">
+        <button class="filter-btn"><a (click)="home()">All</a></button>
+        <button class="filter-btn" (click)="temples()">Temples</button>
+        <button class="filter-btn" (click)="beaches()">Beaches</button>
+        <button class="filter-btn" (click)="wildlife()">Wildlife</button>
+        <button class="filter-btn" (click)="heritage()">Heritage</button>
+        <button class="filter-btn active" (click)="nature()">Nature</button>
+    </div>
+
+    
+
+    <div class="nature-grid">
+        <div *ngFor="let destination of natureDestinations" class="nature-card">
+            <img [src]="destination.imagePath" alt="{{destination.name}}">
+            <div class="nature-info">
+                <div>
+                    <div class="nature-name">{{ destination.name }}</div>
+                    <div class="nature-location">{{ destination.location }}</div>
+                    <div class="nature-about">{{ destination.description }}</div>
+                </div>
+                <div class="buttons-container">
+                    <p class="rating">
+                        ★★★★★ <span>{{ destination.rating }}</span>
+                        ₹{{ destination.price }}
+                    </p>
+                    <button class="button know-more-btn">Know More</button>
+                    <button class="button book-now-btn" (click)="bookPackage(destination)">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<footer id="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <p>We are dedicated to providing the best travel experiences for our customers.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Traveler Stories</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#faq">FAQs</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Email: inf</p>
+            <p>Phone: +1 234 567 890</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Travel Planning Website. All rights reserved.</p>
+    </div>
+  </footer>

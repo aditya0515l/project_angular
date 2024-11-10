@@ -1,0 +1,306 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F6FCDF; 
+    color: #1A1A19; 
+    padding: 15px;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #1A1A19;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #859F3D; 
+}
+
+.search-box input {
+    padding: 10px;
+    border: 1px solid #859F3D; 
+    width: 400px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+#logoutBtn {
+    background-color: #1A1A19; 
+    color: #F6FCDF; 
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#loginBtn:hover {
+    background-color: #859F3D; 
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    padding: 40px 0;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #859F3D;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.filters {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: white;
+    color: #666;
+    cursor: pointer;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: #859F3D;
+    color: white;
+}
+/* Grid layout for the beach cards */
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Styling for each beach card */
+.destination-card {
+    position: relative;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for the cards */
+.destination-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Gradient overlay effect for each card */
+.destination-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.8) 100%);
+    z-index: 1;
+}
+
+/* Image inside each card */
+.destination-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Info section inside each card */
+.destination-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    color: white;
+    z-index: 2;
+}
+
+/* Beach name styling */
+.destination-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Location and other info styling */
+.destination-location {
+    font-size: 0.9rem;
+    color: #90caf9;
+    margin-bottom: 8px;
+}
+
+/* About section styling */
+.destination-about {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+/* Show 'about' text on hover */
+.destination-card:hover .destination-about {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Container for action buttons */
+.buttons-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Button styles */
+.button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* 'Know More' button styling */
+.know-more-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Hover effect for 'Know More' button */
+.know-more-btn:hover {
+    background-color: #0056b3;
+}
+
+/* 'Book Now' button styling */
+.book-now-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+/* Hover effect for 'Book Now' button */
+.book-now-btn:hover {
+    background-color: #218838;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+    .destination-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .destination-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .destination-grid {
+        grid-template-columns: 1fr;
+    }
+}
+#footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.footer-section {
+    margin: 15px;
+    flex: 1;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 1em;
+    color: #f4f4f4;
+    line-height: 1.5;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #f4f4f4;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #f4f4f4;
+    padding: 10px 0;
+}

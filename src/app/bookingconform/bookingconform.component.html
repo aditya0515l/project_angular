@@ -1,0 +1,39 @@
+<div class="container">
+  <h2>Booking Confirmation</h2>
+
+  <!-- Package Details -->
+  <div class="package-details">
+      <h3>{{ packageDetails?.name }}</h3>
+      <p>Price per person: ₹{{ packageDetails?.price }}</p>
+      <p>Description: {{ packageDetails?.description }}</p>
+
+      <!-- Tour Plan -->
+      <h4>Tour Plan:</h4>
+      <ul>
+          <li *ngFor="let day of packageDetails?.plan">{{ day }}</li>
+      </ul>
+
+      <!-- Reviews -->
+      <h4>Reviews:</h4>
+      <ul>
+          <li *ngFor="let review of packageDetails?.reviews">
+              {{ review.rating }} - {{ review.comment }}
+          </li>
+      </ul>
+  </div>
+
+  <!-- Booking Details -->
+  <div class="booking-details">
+      <h3>Your Booking Details:</h3>
+      <p>Name: {{ bookingDetails?.name }}</p>
+      <p>Email: {{ bookingDetails?.email }}</p>
+      <p>Phone Number: {{ bookingDetails?.phone }}</p>
+      <p>Tour Date: {{ bookingDetails?.date }}</p>
+      <p>Number of Guests: {{ bookingDetails?.guests }}</p>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+      <!-- Footer content here -->
+  </footer>
+</div>

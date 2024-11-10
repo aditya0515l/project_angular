@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F6FCDF; 
+    color: #1A1A19; 
+    padding: 15px;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #1A1A19;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #859F3D; 
+}
+
+.search-box input {
+    padding: 10px;
+    border: 1px solid #859F3D; 
+    width: 400px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+#logoutBtn {
+    background-color: #1A1A19; 
+    color: #F6FCDF; 
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#loginBtn:hover {
+    background-color: #859F3D; 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.price-section {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.price {
+    font-size: 2.5em;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 30px;
+}
+
+.left-content {
+    flex: 2;
+}
+
+.description {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.info-sections {
+    display: flex;
+    gap: 20px;
+}
+
+.tour-plan, .reviews {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.booking-form {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.form-group input, 
+.form-group select {
+    width: 150%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.book-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.book-button:hover {
+    background-color: #34495e;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+#footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.footer-section {
+    margin: 15px;
+    flex: 1;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 1em;
+    color: #f4f4f4;
+    line-height: 1.5;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #f4f4f4;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #f4f4f4;
+    padding: 10px 0;
+}

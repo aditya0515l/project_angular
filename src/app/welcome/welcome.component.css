@@ -1,0 +1,32 @@
+.hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background: url('https://img.staticmb.com/mbcontent/images/uploads/2023/5/Feature_Bhulekh_Odisha.jpg') no-repeat center center/cover; /* Set background image */
+    position: relative; /* Make sure text stays on top */
+    border: 10px;
+}
+
+.text {
+    text-align: center; /* Center the text horizontally */
+    color: white; /* Text color for contrast */
+    font-family: Arial, sans-serif; /* Choose your preferred font */
+    z-index: 2; /* Ensure the text is above the background */
+    padding: 200px;
+}
+
+.explore-btn {
+    padding: 10px 20px;
+    background-color: #7bc84b; /* Button color */
+    border-radius: 10px;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.explore-btn:hover {
+    background-color: #84af63; /* Hover effect for the button */
+}
